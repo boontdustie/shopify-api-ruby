@@ -72,6 +72,16 @@ Full list of methods can be found on each of the resource class.
 - Example for `Order` resource on `2023-04` version:
   - https://github.com/Shopify/shopify-api-ruby/blob/main/lib/shopify_api/rest/resources/2023_04/order.rb
 
+### Headers
+You can add custom headers to the HTTP calls made by methods like `find`, `delete`, `all`, `count`
+by setting the `headers` attribute on the `ShopifyAPI::Rest::Base` class in an initializer, like so:
+
+```ruby
+ShopifyAPI::Rest::Base.headers = { "X-Custom-Header" => "Custom Value" }
+# `find` will call the API endpoint with the custom header
+ShopifyAPI::Customer.find(id: customer_id)
+```
+
 ### Usage Examples
 ⚠️ Reference documentation on [shopify.dev](https://shopify.dev/docs/api/admin-rest) contains more examples on how to use each REST Resources.
 
