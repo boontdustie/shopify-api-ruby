@@ -22,7 +22,7 @@ module WebhookHandler
 
   class << self
     def handle_webhook(data)
-      puts "Received webhook! topic: #{data.topic} shop: #{data.shop} body: #{data.body} webhook_id: #{data.webhook_id} api_version: #{data.api_version"
+      puts "Received webhook! topic: #{data.topic} shop: #{data.shop} body: #{data.body} webhook_id: #{data.webhook_id} api_version: #{data.api_version}"
     end
   end
 end
